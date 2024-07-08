@@ -1,10 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
+// import styles from './panel.scss';
 
 const Panel = ({ title, children }) => {
   return (
     <>
-      {title && <h2>{title}</h2>}
+      {title && <h2 className="panel-title">{title}</h2>}
       {children}
     </>
   );

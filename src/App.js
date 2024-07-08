@@ -1,17 +1,21 @@
 // import logo from "./logo.svg";
-import "./App.css";
-import Logo from "./components/Logo/Logo";
-import PaintingList from "./components/Painting/PaintingList";
-import paintingJson from "./components/Data/paintings.json";
-import Panel from "./components/Panel/Panel";
+
+// import Container from './components/Container/Container';
+// import AppBar from './components/AppBar/AppBar';
+import Layout from './components/Layout/Layout';
+import Logo from './components/Logo/Logo';
+import PaintingList from './components/Painting/PaintingList';
+import paintingJson from './components/Data/paintings.json';
+import Panel from './components/Panel/Panel';
+// import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Logo text="Логотип" />
+    <>
+      <Layout>
+        <Logo text="Логотип" type="error" />
         <Panel title="Свежие новости">
-          <p>
+          <p style={{ textAlign: 'center' }}>
             Ми робимо все, щоб ви мали змогу швидко, просто і комфортно придбати
             необхідні для вас матеріали. У нас є все, що тільки може знадобитися
             вам і вашим дітям: 1. Книжки для дітей різного віку, починаючи від
@@ -26,7 +30,7 @@ function App() {
           </p>
         </Panel>
         <Panel>
-          <p>
+          <p style={{ textAlign: 'center' }}>
             Ми робимо все, щоб ви мали змогу швидко, просто і комфортно придбати
             необхідні для вас матеріали. У нас є все, що тільки може знадобитися
             вам і вашим дітям: 1. Книжки для дітей різного віку, починаючи від
@@ -41,8 +45,8 @@ function App() {
           </p>
         </Panel>
         <PaintingList paintingJson={paintingJson} />
-      </header>
-    </div>
+      </Layout>
+    </>
   );
 }
 

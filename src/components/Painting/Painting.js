@@ -1,22 +1,22 @@
-import React from "react";
-import PropTypes from "prop-types";
-import defaulImage from "../../images/bird-3715670_1280.jpg";
+import React from 'react';
+import PropTypes from 'prop-types';
+import defaulImage from '../../images/bird-3715670_1280.jpg';
 
 const Painting = ({ url, title, price, quantity }) => {
   // рендер по условию
   const productAvailability =
-    quantity < 10 ? "заканчиваеться" : "есть в наличии";
+    quantity < 10 ? 'заканчиваеться' : 'есть в наличии';
 
   return (
     <div>
       {/* <img src={defaulImage} alt={title} width="480" /> */}
-      <img src={url} alt={title} width="480" />
-      <h2>{title}</h2>
+      <img src={url} alt={title} width="330" />
+      <h2 style={{ textAlign: 'center' }}>{title}</h2>
       {/* <p>
         Автор: <a href={profileUrl}>{tag}</a>
       </p> */}
-      <p>Цена: {price} кредитов</p>
-      <p>Товар: {productAvailability}</p>
+      <p style={{ textAlign: 'center' }}>Цена: {price} кредитов</p>
+      <p style={{ textAlign: 'center' }}>Товар: {productAvailability}</p>
       {/* <p>Товар: {quantity < 10 ? "заканчиваеться" : "есть в наличии"}</p> */}
       {/* <button type="button">Добавить в корзину</button> */}
     </div>

@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Painting from "./Painting";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Painting from './Painting';
 
 const PaintingList = ({ paintingJson }) => {
   return (
     <>
-      <ul>
+      <ul className="list">
         {paintingJson.map(({ id, url, title, price, quantity }) => (
           <li key={id}>
             <Painting
@@ -25,7 +25,7 @@ PaintingList.protoTypes = {
   paintingJson: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-    })
+    }),
   ).isRequired,
 };
 
