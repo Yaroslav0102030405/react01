@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 // import logo from "./logo.svg";
 
 // import Container from './components/Container/Container';
@@ -8,8 +9,19 @@ import PaintingList from './components/Painting/PaintingList';
 import paintingJson from './components/Data/paintings.json';
 import Panel from './components/Panel/Panel';
 // import Footer from './components/Footer/Footer';
+import Counter from './components/Counter/Counter';
+import Dropdown from './components/Dropdown/Dropdown';
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  const onIncrement = () => {
+    setCount(count + 1);
+  };
+
+  const onDecrement = () => {
+    setCount(count - 1);
+  };
   return (
     <>
       <Layout>
@@ -43,6 +55,15 @@ function App() {
             оцінювання (ЗНО)) і Державної підсумкової атестації (укр .: Державна
             підсумкова атестація (ДПА)).
           </p>
+          <Counter
+            onDecrement={onDecrement}
+            onIncrement={onIncrement}
+            count={count}
+          />
+          {/* <Dropdown /> */}
+          <Dropdown>
+            <h2>Привіт!</h2>
+          </Dropdown>
         </Panel>
         <PaintingList paintingJson={paintingJson} />
       </Layout>

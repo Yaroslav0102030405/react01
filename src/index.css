@@ -49,4 +49,20 @@ li {
 .footer {
   min-height: 80px;
   background-color: cadetblue;
+}
+
+.Dropdown {
+  position: relative;
+  width: 180px;
+}
+
+.Dropdown__menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background-color: blueviolet;
+  color: white;
 }/*# sourceMappingURL=index.css.map */
